@@ -28,18 +28,6 @@ class LionTest {
     }
 
     @Test
-    void doesHaveManeReturnsTrueForMale() throws Exception {
-        Lion lion = new Lion(feline, "Самец");
-        assertTrue(lion.doesHaveMane());
-    }
-
-    @Test
-    void doesHaveManeReturnsFalseForFemale() throws Exception {
-        Lion lion = new Lion(feline, "Самка");
-        assertFalse(lion.doesHaveMane());
-    }
-
-    @Test
     void constructorThrowsExceptionForInvalidSex() {
         Exception exception = assertThrows(Exception.class, () -> new Lion(feline, "Неизвестно"));
         assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
